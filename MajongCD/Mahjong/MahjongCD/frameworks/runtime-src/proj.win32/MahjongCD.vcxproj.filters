@@ -50,9 +50,6 @@
     <ClInclude Include="..\Classes\CDHttpClient.h">
       <Filter>Classes</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\UpdateMsg.h">
-      <Filter>Classes</Filter>
-    </ClInclude>
     <ClInclude Include="..\Classes\HttpDownLoader.h">
       <Filter>Classes</Filter>
     </ClInclude>
@@ -100,9 +97,6 @@
       <Filter>auto</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\CDHttpClient.cpp">
-      <Filter>Classes</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\UpdateMsg.cpp">
       <Filter>Classes</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\HttpDownLoader.cpp">
