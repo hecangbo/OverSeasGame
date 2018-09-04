@@ -11,6 +11,7 @@ FileInfo =
    "res02.plist",
    "roomBG.plist",  
    "res_mj.plist",
+   "os_mainmenu.plist"
 }
 
 

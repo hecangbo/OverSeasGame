@@ -7,7 +7,7 @@
             <key>background_nn_loading_animation.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{72,796},{104,104}}</string>
+                <string>{{2,644},{104,104}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -30,71 +30,6 @@
                 <key>sourceSize</key>
                 <string>{960,640}</string>
             </dict>
-            <key>message_box_background.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{154,902},{60,60}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{60,60}}</string>
-                <key>sourceSize</key>
-                <string>{60,60}</string>
-            </dict>
-            <key>queding.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{2,796},{150,68}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <true/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{150,68}}</string>
-                <key>sourceSize</key>
-                <string>{150,68}</string>
-            </dict>
-            <key>queding1.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{72,644},{150,66}}</string>
-                <key>offset</key>
-                <string>{0,-1}</string>
-                <key>rotated</key>
-                <true/>
-                <key>sourceColorRect</key>
-                <string>{{0,2},{150,66}}</string>
-                <key>sourceSize</key>
-                <string>{150,68}</string>
-            </dict>
-            <key>quxiao.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{2,644},{150,68}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <true/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{150,68}}</string>
-                <key>sourceSize</key>
-                <string>{150,68}</string>
-            </dict>
-            <key>quxiao1.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{2,948},{150,66}}</string>
-                <key>offset</key>
-                <string>{0,-1}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,2},{150,66}}</string>
-                <key>sourceSize</key>
-                <string>{150,68}</string>
-            </dict>
         </dict>
         <key>metadata</key>
         <dict>
@@ -105,7 +40,7 @@
             <key>size</key>
             <string>{1024,1024}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:2e7e767fc376956feaf0d34972f8520d$</string>
+            <string>$TexturePacker:SmartUpdate:ea93c0c976a04a689483175896b674a6$</string>
             <key>textureFileName</key>
             <string>scene.png</string>
         </dict>

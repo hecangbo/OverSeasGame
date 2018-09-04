@@ -86,6 +86,14 @@ Utility=
         end
     end;
 
+    setVisable = function(tag,visable)
+        local obj = Utility.getWidget(tag)
+        if obj ~= nil then
+            obj:setVisible(visable)
+        end
+    end;
+
+
     --当前平台
     getTargetPlatform= function()
         return tonumber(targetPlatform)
