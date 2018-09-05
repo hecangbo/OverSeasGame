@@ -72,6 +72,7 @@ bool AppDelegate::applicationDidFinishLaunching()
 	searchPath.push_back("Resources\\Script");
 	searchPath.push_back("Resources\\res");
 	searchPath.push_back("Resources\\csb");
+	searchPath.push_back("Resources\\Animation");
 	//searchPath.push_back("Script");
 #elif (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID or CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
 	string lPath = CCFileUtils::sharedFileUtils()->getWritablePath();
@@ -80,10 +81,13 @@ bool AppDelegate::applicationDidFinishLaunching()
 	searchPath.push_back(lPath + "assets/Script");
 	searchPath.push_back(lPath + "assets/res");
 	searchPath.push_back(lPath + "assets/csb");
+	searchPath.push_back(lPath + "assets/Animation");
+	searchPath.push_back("csb");
 #endif
 	searchPath.push_back("Script");
 	searchPath.push_back("res");
 	searchPath.push_back("csb");
+	searchPath.push_back("Animation");
 	for (vector<string>::iterator iter = searchPath.begin(); iter != searchPath.end(); ++iter)
 	{
 		CCLOG("...............hcb:==%s", (*iter).c_str());
