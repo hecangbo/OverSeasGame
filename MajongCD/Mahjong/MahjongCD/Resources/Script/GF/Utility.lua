@@ -118,4 +118,16 @@ Utility=
     end
 
 }
+
+function cartoon(parentLayer,aniName)
+--    local skeletonNode = sp.SkeletonAnimation:create("Praise/Praise.json", "Praise/Praise.atlas", 0.6)
+--    skeletonNode:setPosition(cc.p(400,300))
+--    skeletonNode:setAnimation(0, "Praise", true)
+--    self.bg_panel:addChild(skeletonNode)
+    local ani = Animation[aniName]
+    local skeletonNode = sp.SkeletonAnimation:create(ani.jsonName, ani.atlasName, ani.scale)
+    skeletonNode:setPosition(cc.p(ani.posX,ani.posY))
+    skeletonNode:setAnimation(0, ani.action, true)
+    parentLayer:addChild(skeletonNode)
+end
 --endregion

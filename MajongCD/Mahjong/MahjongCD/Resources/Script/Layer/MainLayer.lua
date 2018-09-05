@@ -1,7 +1,6 @@
 --region *.lua
 --Date
 --此文件由[BabeLua]插件自动生成
-
 MainLayer=
 {
     --TAG_BUT_FASTBEGIN = 11,     --快速开始
@@ -43,12 +42,10 @@ function MainLayer:onEnterTransitionFinish()
     self.img_middle = self.bg_panel:getChildByTag(self.TAG_IMAGE_MIDDLE)
     self.img_bottom = self.bg_panel:getChildByTag(self.TAG_IMAGE_BOOTOM)
 
-    --self.img_top:setVisible(false) --显示隐藏
+    --self.img_top:setVisible(false) --显示隐藏  
 
-    local skeletonNode = sp.SkeletonAnimation:create("Praise/Praise.json", "Praise/Praise.atlas", 0.6)
-    skeletonNode:setPosition(cc.p(400,300))
-    skeletonNode:setAnimation(0, "Praise", true)
-    self.bg_panel:addChild(skeletonNode)
+    cartoon(self.bg_panel,"Praise")
+    cartoon(self.bg_panel,"PraiseX")
 end
 
 function MainLayer:onExit()

@@ -3,6 +3,7 @@
 --此文件由[BabeLua]插件自动生成
 cc.FileUtils:getInstance():addSearchPath("../res")
 cc.FileUtils:getInstance():addSearchPath("../csb")
+cc.FileUtils:getInstance():addSearchPath("../Animation")
 --local path = cc.FileUtils:getInstance():getSearchPaths()
 
 require("GF/SystemConfig.lua")
@@ -13,7 +14,7 @@ require("GF/json.lua")
 require("GF/Config.lua")
 require("GF/TimerManager.lua")
 require("GF/GameCenter.lua")
-
+require("GF/Animation.lua")
 scenemanager = SceneManager:new()
 addimagesync = my.ImageLoader:new()
 
