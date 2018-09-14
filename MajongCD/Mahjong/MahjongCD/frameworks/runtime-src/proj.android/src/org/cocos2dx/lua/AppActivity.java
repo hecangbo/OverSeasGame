@@ -40,9 +40,11 @@ import android.view.WindowManager;
 
 import com.moon.mahjong.wxapi.*;
 import com.tencent.mm.opensdk.modelmsg.SendAuth;
+import com.tencent.mm.opensdk.modelmsg.SendMessageToWX;
+import com.tencent.mm.opensdk.modelmsg.WXMediaMessage;
+import com.tencent.mm.opensdk.modelmsg.WXTextObject;
 import com.tencent.mm.opensdk.openapi.WXAPIFactory;
 import com.tencent.mm.opensdk.openapi.IWXAPI;
-
 import com.moon.mahjong.wxapi.*;
 public class AppActivity extends Cocos2dxActivity{
 	private static AppActivity c = null;
@@ -93,4 +95,23 @@ public class AppActivity extends Cocos2dxActivity{
         //向微信发送请求
         WXapi.sendReq(req);
 	}
+	
+	public static void WeChatShard(String WX_APP_ID){
+		IWXAPI WXapi;
+		WXapi = WXAPIFactory.createWXAPI(c, WX_APP_ID, false);
+        WXapi.registerApp(WX_APP_ID);
+		WXTextObject textObj = new WXTextObject();
+		textObj.text = "请关注个人空间";
+		WXMediaMessage msg = new WXMediaMessage();
+		msg.mediaObject = textObj;
+		msg.description = "请关注个人空间";
+		
+		SendMessageToWX.Req req = new SendMessageToWX.Req();
+		req.transaction = String.valueOf(System.currentTimeMillis());
+		//req.scene = SendMessageToWX.Req.WXSceneSession;		//文字分享
+		req.scene = SendMessageToWX.Req.WXSceneTimeline;		//分享到朋友圈
+		req.message = msg;
+		WXapi.sendReq(req);
+	}
+	
 }

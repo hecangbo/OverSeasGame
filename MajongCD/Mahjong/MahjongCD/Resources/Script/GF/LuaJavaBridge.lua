@@ -33,6 +33,16 @@ LuaJavaBinding={
         local sigs = "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V"
         LuaJavaBinding.toJava(className, funName, args, sigs)
    end;
+
+
+    --微信分享
+   WeChatShard = function(appid)
+        local className = "org/cocos2dx/lua/AppActivity"
+        local funName = "WeChatShard"
+        local args = {appid}
+        local sigs = "(Ljava/lang/String;)V"
+        LuaJavaBinding.toJava(className, funName, args, sigs)
+   end;
 }
 
 

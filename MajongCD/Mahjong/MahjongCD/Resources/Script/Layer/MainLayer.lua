@@ -82,7 +82,9 @@ end
 
 
 function MainLayer:onBtnFastBeginGame()
-
+    logOut("微信分享")
+    local appid = "wx71181ef0abf7bea9"
+    LuaJavaBinding.WeChatShard(appid)
 end
 
 
