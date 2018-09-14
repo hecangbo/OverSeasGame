@@ -52,4 +52,10 @@ function getUpdateInfo()
     return info
 end
 
+
+--获取微信用户信息
+getWeChatUserInfoURL = function()
+    local url = "https://api.weixin.qq.com/sns/userinfo?access_token=%s&openid=%s"
+    return url
+end
 --endregion

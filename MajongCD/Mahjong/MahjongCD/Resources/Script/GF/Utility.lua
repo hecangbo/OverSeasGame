@@ -115,10 +115,16 @@ Utility=
         if(func ~= nil ) then
             func(obj, tag)
         end
-    end
+    end;
 
+    isFileExists = function(path)
+		local f = io.open(path, "rb")
+		if f then f:close() end
+		return f ~= nil
+	end;
 }
 
+--动画
 function cartoon(parentLayer,aniName)
 --    local skeletonNode = sp.SkeletonAnimation:create("Praise/Praise.json", "Praise/Praise.atlas", 0.6)
 --    skeletonNode:setPosition(cc.p(400,300))
@@ -130,4 +136,6 @@ function cartoon(parentLayer,aniName)
     skeletonNode:setAnimation(0, ani.action, true)
     parentLayer:addChild(skeletonNode)
 end
+
+
 --endregion

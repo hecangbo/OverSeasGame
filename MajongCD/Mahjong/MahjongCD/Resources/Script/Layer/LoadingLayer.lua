@@ -1,7 +1,8 @@
---region *.lua
+﻿--region *.lua
 --Date
 --此文件由[BabeLua]插件自动生成
 require("Layer/MainLayer.lua")
+require("GF/WeChat.lua")
 FileInfo = 
 {
    "login.plist",
@@ -50,6 +51,8 @@ function LoadingLayer:onEnterTransitionFinish()
     self._tg:getEventDispatcher():addEventListenerWithFixedPriority(listener,1)
 
     addimagesync:AddImageAsync(FileInfo)
+    
+    notificationCenter:register(self, self.onWeChatUserInfo, Notifications.bindWeChatUserInfo)
 end
 
 function LoadingLayer:onExit()
@@ -71,8 +74,23 @@ end
 
 --资源加载完成
 function LoadingLayer:onImageLoadDone()
-    scenemanager:run(MainLayer)
+    if (PLATFORM.PLATFORM_OS_ANDROID == tonumber(Utility.getTargetPlatform())) then
+        WeChat.WeChatLogin()
+  else     
+        --直接进入，不使用微信登录
+        scenemanager:run(MainLayer)
+    end    
+end
 
+function LoadingLayer:onWeChatUserInfo(msg)
+    local str = json.decode(msg)
+    logOut(str.accessToken..";"..str.unionID)
+    local function userinfo(msg2)
+        local str = json.decode(msg2)       
+        userManager:setWeChatUserInfo(msg2)        
+        scenemanager:run(MainLayer)
+    end
+    HttpBindHelper.bindWeChatUserInfo(str.accessToken, str.unionID, userinfo)
 end
 
 --endregion

@@ -1,0 +1,15 @@
+把android.keystore复制一份为debug.keystore
+第一步：	修改keystore密码的命令
+keytool -storepasswd -keystore debug.keystore
+第二步：查看别名
+keytool -list -v -keystore debug.keystore
+第四步：修改keystore的alias:
+keytool -changealias -keystore debug.keystore -alias android.keystore -destalias androiddebugkey
+第五步：修改alials的密码
+keytool -keypasswd -keystore debug.keystore -alias androiddebugkey
+
+
+例：
+keytool -storepasswd -keystore debug.keystore
+keytool -changealias -keystore debug.keystore -alias mahjong -destalias androiddebugkey
+keytool -keypasswd -keystore debug.keystore -alias androiddebugkey

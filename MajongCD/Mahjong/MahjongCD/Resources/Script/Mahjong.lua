@@ -15,8 +15,15 @@ require("GF/Config.lua")
 require("GF/TimerManager.lua")
 require("GF/GameCenter.lua")
 require("GF/Animation.lua")
+require("GF/HttpClient.lua")
+require("GF/HttpBindHelper.lua")
+require("GF/LuaNotificationCenter.lua")
+require("GF/Notifications.lua")
+require("GF/UserManager.lua")
 scenemanager = SceneManager:new()
 addimagesync = my.ImageLoader:new()
+notificationCenter = LuaNotificationCenter:new()
+userManager = UserManager:new()
 
 --当前环境重定义
 local EnvDebug = Environment.DEBUG
