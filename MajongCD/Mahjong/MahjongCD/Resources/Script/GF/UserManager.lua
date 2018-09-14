@@ -21,7 +21,8 @@ end
 
 
 function UserManager:setWeChatUserInfo(msg)
-    self._weChat.info = json.decode(msg)
+    local content = string.gsub(msg,"\\","")
+    self._weChat.info = json.decode(content)
 end
 function UserManager:getWeChatUserInfo()
     return self._weChat.info

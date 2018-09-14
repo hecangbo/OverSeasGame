@@ -1,7 +1,7 @@
 ﻿require("GF/Utility.lua")
 require("GF/LuaJavaBridge.lua")
 require("Mahjong.lua")
-logOut("game start")
+print("game start")
 
 
 local function main()

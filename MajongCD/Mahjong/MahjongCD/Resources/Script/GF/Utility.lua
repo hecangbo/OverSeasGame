@@ -22,15 +22,25 @@ PLATFORM=
 
 
 function __G__TRACKBACK__(msg)
-    logOut("调用lua失败")
+    print("调用lua失败")
 end
 
-function logOut(str)
+--function logOut(str)
+--    if luajava ==nil then
+--        print("[Lua].......hcb:"..str)
+--    else
+--        local logcat = luajava.bindClass("android.util.Log")
+--        logcat:d("[Lua].......hcb:",str)
+--    end
+--end
+
+function logOut(msg)
+    local str= "类名:"..debug.getinfo(2).short_src ..";行:[".. debug.getinfo(2).currentline.."];打印内容： " .. tostring(msg)  
     if luajava ==nil then
-        print("[Lua].......hcb:"..str)
+        print("..[Lua]"..str)
     else
         local logcat = luajava.bindClass("android.util.Log")
-        logcat:d("[Lua].......hcb:",str)
+        logcat:d("..[Lua]",str)
     end
 end
 

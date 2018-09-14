@@ -38,12 +38,20 @@ function MainLayer:onEnterTransitionFinish()
     self.userHead = self.bg_panel:getChildByTag(self.TAG_IMAGE_HEAD)
     self.userName = self.bg_panel:getChildByTag(self.TAG_IMAGE_BOARD):getChildByTag(self.TAG_LABEL_USERNAME)
     
-    local wechatinfo = userManager:getWeChatUserInfo()
-    local wechatInfo_NickName = wechatinfo.nickname    
-    self.userName:setString(wechatInfo_NickName)   
     
-    --WeChat.LoadWeChatHeadImag(wechatinfo.headimgurl)
-    --WeChat.setWeChatHeadImag(self.bg_panel, self.TAG_IMAGE_HEAD)
+    local wechatinfo = userManager:getWeChatUserInfo()
+    if wechatinfo ~=nil then
+        if wechatinfo.nickname~=nil then
+            local wechatInfo_NickName = wechatinfo.nickname    
+            self.userName:setString(wechatInfo_NickName)
+        end
+
+        --微信头像
+        if wechatinfo.headimgurl~= nil then
+            WeChat.LoadWeChatHeadImag(wechatinfo.headimgurl)
+            WeChat.setWeChatHeadImag(self.bg_panel, self.TAG_IMAGE_HEAD)
+        end
+    end
 end
 
 function MainLayer:onExit()
