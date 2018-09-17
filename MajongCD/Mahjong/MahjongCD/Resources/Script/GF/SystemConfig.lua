@@ -16,7 +16,7 @@ if nil == glView then
     glView = cc.GLViewImpl:createWithRect("四川Mahjong", cc.rect(0,0,GLView.Size.width,GLView.Size.height))
     director:setOpenGLView(glView)
 end
-cc.Director:getInstance():getOpenGLView():setDesignResolutionSize(GLView.Size.width,GLView.Size.height, 4)
+cc.Director:getInstance():getOpenGLView():setDesignResolutionSize(GLView.Size.width,GLView.Size.height, 0)
 --turn on display FPS
 director:setDisplayStats(true)
 

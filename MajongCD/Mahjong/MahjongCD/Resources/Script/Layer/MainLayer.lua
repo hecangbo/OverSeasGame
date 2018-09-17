@@ -1,11 +1,14 @@
 --region *.lua
 --Date
 --此文件由[BabeLua]插件自动生成
+require("Layer/TianFuLayer.lua")
 MainLayer=
 {
     TAG_BUT_FASTBEGIN = 11,     --快速开始
     TAG_BUT_HALLLAYER = 12,     --游戏大厅
     TAG_BUT_CHANGEACCOUNT = 13,  --更换帐号
+    TAG_BUT_WECHATSHARD = 21,   --微信分享
+    TAG_BUT_TIANFUN = 32,       --天府
     TAG_IMAGE_BOARD = 24,
     TAG_LABEL_USERNAME = 25,    --用户名
     TAG_IMAGE_HEAD = 9,          --头像
@@ -63,6 +66,8 @@ function MainLayer:registerBtnEvent()
         self.TAG_BUT_FASTBEGIN,
         self.TAG_BUT_HALLLAYER,
         self.TAG_BUT_CHANGEACCOUNT,
+        self.TAG_BUT_WECHATSHARD,
+        self.TAG_BUT_TIANFUN,
     }
     CocostudioHelper.regBtnEvt(self, tags)
 end
@@ -73,6 +78,8 @@ end
 function  MainLayer:onPressEnded(sender)
     local action =
     {
+        [self.TAG_BUT_WECHATSHARD]      = self.onBtnWechatShard,
+        [self.TAG_BUT_TIANFUN]          = self.onBtnTianFu,
         [self.TAG_BUT_FASTBEGIN]        = self.onBtnFastBeginGame,
         [self.TAG_BUT_HALLLAYER]        = self.onBtnHall,
         [self.TAG_BUT_CHANGEACCOUNT]    = self.onBtnChangeAccount,
@@ -80,16 +87,28 @@ function  MainLayer:onPressEnded(sender)
     Utility.callFunc(self, sender:getTag(), action)
 end
 
-
-function MainLayer:onBtnFastBeginGame()
+function MainLayer:onBtnWechatShard()
     logOut("微信分享")
     local appid = "wx71181ef0abf7bea9"
-    LuaJavaBinding.WeChatShard(appid)
+    local context = "QPGame分享内容"
+    LuaJavaBinding.WeChatShard(appid, context)
+end
+
+function MainLayer:onBtnTianFu()
+    scenemanager:run(TianFuLayer)
+end
+function MainLayer:onBtnFastBeginGame()
+    
 end
 
 
 function MainLayer:onBtnHall()
     --require("GF/WSProxy.lua")
+end
+
+function MainLayer:onBtnChangeAccount()
+    --支付宝支付
+    local pid = "2088702104062798"
 end
 
 ----endregion
