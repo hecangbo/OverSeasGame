@@ -48,6 +48,11 @@ function TianFuLayer:onEnterTransitionFinish()
     cartoon(self.bg_panel,"PraiseX")
 end
 
+
+function TianFuLayer:onBackClicked()
+    sceneManager:close(self)
+end
+
 function TianFuLayer:onExit()
     --self:unRegisterBtnEvent()
 end

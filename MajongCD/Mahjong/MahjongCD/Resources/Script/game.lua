@@ -2,7 +2,7 @@
 require("GF/LuaJavaBridge.lua")
 require("Mahjong.lua")
 print("game start")
-
+require "cocos.init"
 
 local function main()
     cc.SpriteFrameCache:getInstance():addSpriteFrames("loading.plist")

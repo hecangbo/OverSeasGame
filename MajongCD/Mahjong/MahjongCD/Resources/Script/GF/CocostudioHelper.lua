@@ -29,7 +29,7 @@ CCSTouchEventType =
 CocostudioHelper =
 {
     registerKeyboardEvent = function(tg, releaseFunc, pressedFunc)
-        local listener = cc.EventListenerKeyboard:creat()
+        local listener = cc.EventListenerKeyboard:create()
         if(releaseFunc~= nil) then
             listener:registerScriptHandler(releaseFunc, cc.Handler.EVENT_KEYBOARD_RELEASED)
         end
@@ -207,14 +207,14 @@ CocostudioHelper =
                 ["cleanup"] = lItem.onCleanup 
             }
 
-            --        if eventType == "enterTransitionFinish" then
-            --                local function onKeyboardEvent(keycode, event)
-            --				    if (keycode == cc.KeyCode.KEY_BACK and lItem.onBackClicked ~= nil) then
-            --					    lItem:onBackClicked()
-            --				    end
-            --			    end
-            --                CocostudioHelper.registerKeyboardEvent(lItem._root, onKeyboardEvent)
-            --            end
+            if eventType == "enterTransitionFinish" then
+                local function onKeyboardEvent(keycode, event)
+            		if (keycode ==cc.KeyCode.KEY_BACK  and lItem.onBackClicked ~= nil) then
+            			lItem:onBackClicked()
+            		end
+            	end
+                CocostudioHelper.registerKeyboardEvent(lItem._root, onKeyboardEvent)
+            end
 
             local func = action[eventType]
                 if(func~= nil) then
