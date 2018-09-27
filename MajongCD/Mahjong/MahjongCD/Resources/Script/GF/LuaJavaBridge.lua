@@ -43,6 +43,14 @@ LuaJavaBinding={
         local sigs = "(Ljava/lang/String;Ljava/lang/String;)V"
         LuaJavaBinding.toJava(className, funName, args, sigs)
    end;
+
+   onZXingScan = function()
+        local className = "org/cocos2dx/lua/AppActivity"
+        local funName = "ZXingScan"
+        local args = {}
+        local sigs = "()V"
+        LuaJavaBinding.toJava(className, funName, args, sigs)
+   end;
 }
 
 

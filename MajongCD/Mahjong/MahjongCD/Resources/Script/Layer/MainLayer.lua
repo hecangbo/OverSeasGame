@@ -98,7 +98,8 @@ function MainLayer:onBtnTianFu()
     scenemanager:run(TianFuLayer)
 end
 function MainLayer:onBtnFastBeginGame()
-    
+    --扫描
+    LuaJavaBinding.onZXingScan()
 end
 
 
