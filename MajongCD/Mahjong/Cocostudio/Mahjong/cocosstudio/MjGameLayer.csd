@@ -1,12 +1,12 @@
 <GameFile>
-  <PropertyGroup Name="MjGameLayer" Type="Layer" ID="85185c0b-7b5e-47e1-a21b-60ecaf21c4d9" Version="2.3.3.0" />
+  <PropertyGroup Name="MjGameLayer" Type="Layer" ID="85185c0b-7b5e-47e1-a21b-60ecaf21c4d9" Version="3.10.0.0" />
   <Content ctype="GameProjectContent">
     <Content>
       <Animation Duration="0" Speed="1.0000" />
       <ObjectData Name="Layer" Tag="24" ctype="GameLayerObjectData">
         <Size X="960.0000" Y="640.0000" />
         <Children>
-          <AbstractNodeData Name="bg_panel" ActionTag="218552602" Tag="10" IconVisible="False" TouchEnable="True" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+          <AbstractNodeData Name="bg_panel" ActionTag="218552602" Tag="10" IconVisible="False" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="960.0000" Y="640.0000" />
             <Children>
               <AbstractNodeData Name="BG" ActionTag="-932905699" Tag="11" IconVisible="False" LeftMargin="-478.1375" RightMargin="-484.8625" TopMargin="-229.2438" BottomMargin="-216.7562" ctype="SpriteObjectData">

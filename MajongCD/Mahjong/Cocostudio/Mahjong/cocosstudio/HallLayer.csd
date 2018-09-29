@@ -1,12 +1,12 @@
 <GameFile>
-  <PropertyGroup Name="HallLayer" Type="Layer" ID="9507c2c0-949a-46b1-a854-7076bee5e04b" Version="2.3.3.0" />
+  <PropertyGroup Name="HallLayer" Type="Layer" ID="9507c2c0-949a-46b1-a854-7076bee5e04b" Version="3.10.0.0" />
   <Content ctype="GameProjectContent">
     <Content>
       <Animation Duration="0" Speed="1.0000" />
       <ObjectData Name="Layer" Tag="28" ctype="GameLayerObjectData">
         <Size X="960.0000" Y="640.0000" />
         <Children>
-          <AbstractNodeData Name="bg_panel" ActionTag="-579486457" Tag="2" IconVisible="False" TouchEnable="True" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+          <AbstractNodeData Name="bg_panel" ActionTag="-579486457" Tag="2" IconVisible="False" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="960.0000" Y="640.0000" />
             <Children>
               <AbstractNodeData Name="bg" ActionTag="1764792958" Tag="29" IconVisible="False" LeftMargin="2.7750" RightMargin="-2.7750" Scale9Width="960" Scale9Height="640" ctype="ImageViewObjectData">

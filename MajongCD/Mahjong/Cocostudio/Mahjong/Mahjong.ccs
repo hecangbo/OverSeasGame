@@ -453,14 +453,14 @@
             <PlistImageFile Name="bg_blue.png" Key="bg_blue.png" />
           </PlistImageFolder>
           <PlistImageFolder Image="thirdParty.png" PListFile="thirdParty.plist" Name=".thirdParty_PList.Dir">
+            <PlistImageFile Name="icon_button3_1.png" Key="icon_button3_1.png" />
+            <PlistImageFile Name="icon_button3_2.png" Key="icon_button3_2.png" />
+            <PlistImageFile Name="icon_button3_3.png" Key="icon_button3_3.png" />
             <PlistImageFile Name="icon24_wx_button.png" Key="icon24_wx_button.png" />
             <PlistImageFile Name="icon32_wx_button.png" Key="icon32_wx_button.png" />
             <PlistImageFile Name="icon48_wx_button.png" Key="icon48_wx_button.png" />
             <PlistImageFile Name="icon64_appwx_logo.png" Key="icon64_appwx_logo.png" />
             <PlistImageFile Name="icon64_wx_logo.png" Key="icon64_wx_logo.png" />
-            <PlistImageFile Name="icon_button3_1.png" Key="icon_button3_1.png" />
-            <PlistImageFile Name="icon_button3_2.png" Key="icon_button3_2.png" />
-            <PlistImageFile Name="icon_button3_3.png" Key="icon_button3_3.png" />
           </PlistImageFolder>
         </Folder>
         <Project Name="HallLayer.csd" Type="Layer" />

@@ -1,12 +1,12 @@
 <GameFile>
-  <PropertyGroup Name="loading" Type="Scene" ID="d3c42908-bec1-4b05-a4ec-a52a5e671aa7" Version="2.3.3.0" />
+  <PropertyGroup Name="loading" Type="Scene" ID="d3c42908-bec1-4b05-a4ec-a52a5e671aa7" Version="3.10.0.0" />
   <Content ctype="GameProjectContent">
     <Content>
       <Animation Duration="0" Speed="1.0000" />
       <ObjectData Name="Scene" Tag="11" ctype="GameNodeObjectData">
         <Size X="960.0000" Y="640.0000" />
         <Children>
-          <AbstractNodeData Name="bg_panel" ActionTag="-1135957797" Tag="2" IconVisible="False" TouchEnable="True" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+          <AbstractNodeData Name="bg_panel" ActionTag="-1135957797" Tag="2" IconVisible="False" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="960.0000" Y="640.0000" />
             <Children>
               <AbstractNodeData Name="di" ActionTag="-219761658" Tag="10" IconVisible="False" LeftMargin="-1.0298" RightMargin="1.0298" TopMargin="0.9954" BottomMargin="-0.9954" ctype="SpriteObjectData">
